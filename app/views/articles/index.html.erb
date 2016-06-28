@@ -8,7 +8,8 @@
     <th>created at</th>
     <th>updated at</th>
     <th>edit</th>
-    <th>show</th></tr>
+    <th>show</th>
+    <th>delete</th></tr>
 <%@articles.each do|f| %>
       <tr>
         <td><%= f.id%></td>
@@ -16,8 +17,10 @@
     <td><%= f.description%></td>
         <td><%= f.created_at%></td>
         <td><%= f.updated_at%></td>
-        <td><%=link_to "edit", edit_article_path(f.id) %></td>
-        <td><%=link_to "show", article_path(f.id) %></td>
+        <td><%= link_to "edit", edit_article_path(f.id) %></td>
+        <td><%= link_to "show", article_path(f.id) %></td>
+        <td><%= link_to 'delete', article_path(f), method: :delete, data: {confirm:"are you sure"} %>
+        </td>
       </tr>
 <%end %>
   </table>
