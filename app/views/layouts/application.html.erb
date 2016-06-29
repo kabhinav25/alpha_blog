@@ -8,9 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<button type="button" class="btn btn-primary">Primary</button>
+<%= render 'layouts/navigation' %>
 <%= render 'layouts/messages' %>
+<div class="container">
 <%= yield %>
 
+</div>
+<%= render 'layouts/footer' %>
 </body>
 </html>
