@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   end
 def update
   if @article.update(article_params)
+    @article.user=User.first
     flash[:success] = "article updated"
     redirect_to article_path(@article)
   else
