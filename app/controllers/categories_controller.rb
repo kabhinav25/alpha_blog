@@ -13,7 +13,7 @@ end
 @category=Category.find(params[:id])
     if @category.update(category_params)
       flash[:success]="category updated successfully"
-      redirect_to category_path(@categor)
+      redirect_to category_path(@category)
     else
        render 'edit'
     end
