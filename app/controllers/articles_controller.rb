@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :require_user, except: [:index,:show]
   before_action :require_same_user, only: [:edit,:update,:destroy]
   def require_same_user
-if current_user!=@article.user
+if current_user!=@article.user && !current_user.admin?
   flash[:danger]="you can only edit & delete your own articles"
   redirect_to root_path
 end
