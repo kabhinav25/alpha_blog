@@ -1,7 +1,7 @@
 require 'test_helper'
-class CreateCategoriestest<ActionDispatch::IntegrationTest
+class ListCategoriestest<ActionDispatch::IntegrationTest
   def setup
-    @category=Category.create(name:"books")
+    @category=Category.create(name:"sports")
     @category2=Category.create(name:"program")
   end
   test "should show category listing" do
