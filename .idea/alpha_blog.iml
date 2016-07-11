@@ -120,7 +120,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
         <env name="RAILS_ENV" value="development" />
-        <env name="VERSION" value="20160709152736" />
+        <env name="VERSION" value="20160711175248" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
